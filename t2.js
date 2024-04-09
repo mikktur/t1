@@ -18,7 +18,7 @@ const listRestaurants = async (selectedValue) => {
 
   table.innerHTML = "";
 
-  for (let r of filtered) {
+  filtered.forEach((r) => {
     const tr = restaurantRow(r);
     tr.addEventListener("click", (e) => {
       e.preventDefault();
@@ -37,5 +37,5 @@ const listRestaurants = async (selectedValue) => {
       tr.classList.add("highlight");
     });
     table.appendChild(tr);
-  }
+  });
 };
